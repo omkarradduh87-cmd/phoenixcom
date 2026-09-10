@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix Computer Education | Computer Training Institute in Chikodi, Karnataka</title>
+<meta name="description" content="Phoenix Computer Education, Chikodi — professional, job-oriented computer courses including Tally, MS Office, Python, Java, Web Designing, Hardware &amp; Networking. Practical training, experienced faculty, certificate courses.">
+<meta name="keywords" content="computer classes Chikodi, computer institute Chikodi Karnataka, Tally course Chikodi, Python course Chikodi, computer training Chikodi, Phoenix Computer Education">
+<meta name="author" content="Phoenix Computer Education">
+<meta property="og:title" content="Phoenix Computer Education — Chikodi, Karnataka">
+<meta property="og:description" content="Learn Today, Build Your Future Tomorrow. Practical, job-oriented computer courses in Chikodi.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B3D67'/%3E%3Cpath d='M30 70 L50 25 L70 70 M38 55 H62' stroke='%23F5821F' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B3D67;
+  --navy-deep:#082B49;
+  --blue:#1668B0;
+  --blue-bright:#2E8BE6;
+  --orange:#F5821F;
+  --orange-dark:#D9690A;
+  --white:#FFFFFF;
+  --bg:#F5F8FC;
+  --ink:#12202E;
+  --ink-soft:#48586A;
+  --line:#DCE6F0;
+  --radius:14px;
+  --shadow:0 14px 36px -18px rgba(11,61,103,0.35);
+  --maxw:1180px;
+  --font-display:'Sora',sans-serif;
+  --font-body:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy);line-height:1.15;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+section{position:relative;}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important;}
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;border-radius:10px;
+  font-weight:600;font-size:0.98rem;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--orange);color:var(--white);box-shadow:0 10px 24px -10px rgba(245,130,31,0.6);}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.55);}
+.btn-outline:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px);}
+.btn-navy{background:var(--navy);color:var(--white);}
+.btn-navy:hover{background:var(--navy-deep);transform:translateY(-2px);}
+.btn-block{width:100%;justify-content:center;}
+.btn-sm{padding:10px 18px;font-size:0.88rem;border-radius:8px;}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{width:42px;height:42px;flex-shrink:0;}
+.brand-text{display:flex;flex-direction:column;line-height:1.1;}
+.brand-text .name{font-family:var(--font-display);font-weight:700;font-size:1.12rem;color:var(--navy);}
+.brand-text .tag{font-size:0.68rem;letter-spacing:0.04em;color:var(--orange);font-weight:600;}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links a{font-weight:600;font-size:0.93rem;color:var(--ink);position:relative;padding:4px 0;transition:color .15s;}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--orange);transition:width .2s ease;}
+.nav-links a:hover{color:var(--blue);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{display:flex;align-items:center;gap:12px;}
+.menu-toggle{display:none;width:42px;height:42px;align-items:center;justify-content:center;border-radius:8px;}
+.menu-toggle:hover{background:var(--bg);}
+@media (max-width:920px){
+  .nav-links{position:fixed;top:70px;left:0;right:0;background:var(--white);flex-direction:column;align-items:flex-start;gap:0;padding:8px 24px 20px;box-shadow:0 16px 30px -20px rgba(0,0,0,0.25);transform:translateY(-8px);opacity:0;pointer-events:none;transition:all .22s ease;}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .nav-links a{width:100%;padding:12px 0;border-bottom:1px solid var(--line);}
+  .nav-cta .btn-navy{display:none;}
+  .menu-toggle{display:flex;}
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 55%,var(--blue) 100%);
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+  padding:76px 0 100px;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(circle at 75% 35%, black, transparent 65%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;position:relative;z-index:2;}
+.eyebrow-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(245,130,31,0.16);border:1px solid rgba(245,130,31,0.4);color:#FFC489;font-size:0.82rem;font-weight:600;padding:7px 14px;border-radius:999px;margin-bottom:22px;}
+.eyebrow-pill span.dot{width:7px;height:7px;border-radius:50%;background:var(--orange);}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem);color:var(--white);font-weight:800;letter-spacing:-0.01em;margin-bottom:20px;max-width:640px;}
+.hero h1 em{font-style:normal;color:var(--orange);}
+.hero-sub{font-size:1.12rem;color:#CFE0F2;max-width:520px;margin-bottom:34px;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px;}
+.hero-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.hero-stats .stat b{display:block;font-family:var(--font-display);font-size:1.5rem;color:var(--white);}
+.hero-stats .stat span{font-size:0.82rem;color:#A9C3DD;}
+.hero-art{position:relative;z-index:2;}
+.hero-art-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:20px;padding:22px;backdrop-filter:blur(6px);box-shadow:0 30px 60px -25px rgba(0,0,0,0.55);}
+.hero-illustration{width:100%;height:auto;}
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;text-align:left;}
+  .hero{padding:52px 0 70px;}
+}
+
+/* ---------- Highlights strip ---------- */
+.highlights{margin-top:-56px;position:relative;z-index:5;}
+.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.highlight-card{background:var(--white);border-radius:var(--radius);padding:24px 20px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;transition:transform .2s ease, box-shadow .2s ease;}
+.highlight-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px -18px rgba(11,61,103,0.3);}
+.icon-badge{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--blue),var(--navy));color:var(--white);flex-shrink:0;}
+.icon-badge svg{width:24px;height:24px;stroke:currentColor;}
+.highlight-card h3{font-size:1.02rem;}
+.highlight-card p{font-size:0.87rem;color:var(--ink-soft);}
+@media (max-width:920px){.highlight-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.highlight-grid{grid-template-columns:1fr;}.highlights{margin-top:-36px;}}
+
+/* ---------- Section headers ---------- */
+.section{padding:100px 0;}
+.section-tight{padding-top:70px;}
+.section-head{max-width:640px;margin-bottom:48px;}
+.section-head .kicker{color:var(--orange);font-weight:700;font-size:0.85rem;letter-spacing:0.02em;margin-bottom:10px;display:block;}
+.section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:14px;}
+.section-head p{color:var(--ink-soft);font-size:1.03rem;}
+.section-alt{background:var(--white);}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:56px;align-items:center;}
+.about-art{position:relative;}
+.about-art svg{width:100%;height:auto;border-radius:20px;}
+.about-copy h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:18px;}
+.about-copy p{color:var(--ink-soft);margin-bottom:16px;}
+.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
+.pillar{border-left:3px solid var(--orange);padding-left:14px;}
+.pillar h4{font-size:0.98rem;margin-bottom:4px;color:var(--navy);}
+.pillar p{font-size:0.85rem;color:var(--ink-soft);margin:0;}
+@media (max-width:920px){.about-grid{grid-template-columns:1fr;}.about-pillars{grid-template-columns:1fr 1fr;}}
+
+/* ---------- Courses ---------- */
+.course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;}
+.course-card{
+  background:var(--white);border-radius:var(--radius);border:1px solid var(--line);
+  padding:26px 22px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  position:relative;overflow:hidden;
+}
+.course-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--orange));transform:scaleX(0);transform-origin:left;transition:transform .25s ease;}
+.course-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent;}
+.course-card:hover::before{transform:scaleX(1);}
+.course-top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.course-icon{width:44px;height:44px;border-radius:10px;background:rgba(22,104,176,0.1);color:var(--blue);display:flex;align-items:center;justify-content:center;}
+.course-icon svg{width:22px;height:22px;stroke:currentColor;}
+.course-duration{font-size:0.76rem;font-weight:700;color:var(--orange-dark);background:rgba(245,130,31,0.12);padding:4px 10px;border-radius:999px;}
+.course-card h3{font-size:1.08rem;}
+.course-card p{font-size:0.87rem;color:var(--ink-soft);flex-grow:1;}
+.course-card .btn{margin-top:6px;}
+
+/* ---------- Why choose us ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.why-card{background:var(--navy);color:var(--white);border-radius:var(--radius);padding:26px 22px;transition:transform .2s ease, background .2s ease;}
+.why-card:hover{transform:translateY(-5px);background:var(--navy-deep);}
+.why-card .icon-badge{background:rgba(245,130,31,0.18);color:var(--orange);margin-bottom:14px;}
+.why-card h3{color:var(--white);font-size:1rem;margin-bottom:6px;}
+.why-card p{font-size:0.85rem;color:#B9CBDD;}
+@media (max-width:920px){.why-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
+
+/* ---------- Testimonials ---------- */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.testi-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column;gap:14px;transition:box-shadow .2s ease, transform .2s ease;}
+.testi-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);}
+.stars{display:flex;gap:3px;color:var(--orange);}
+.stars svg{width:16px;height:16px;fill:currentColor;}
+.testi-card p.quote{color:var(--ink-soft);font-size:0.94rem;}
+.testi-person{display:flex;align-items:center;gap:12px;margin-top:auto;}
+.avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;color:var(--white);flex-shrink:0;}
+.testi-person .who b{display:block;font-size:0.92rem;color:var(--navy);}
+.testi-person .who span{font-size:0.78rem;color:var(--ink-soft);}
+@media (max-width:920px){.testi-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:640px){.testi-grid{grid-template-columns:1fr;}}
+
+/* ---------- Gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+.gallery-item{border-radius:var(--radius);aspect-ratio:1/1;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px;color:var(--white);isolation:isolate;transition:transform .25s ease;}
+.gallery-item:hover{transform:scale(1.03);}
+.gallery-item::before{content:'';position:absolute;inset:0;z-index:-1;}
+.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg, rgba(8,43,73,0.75), rgba(8,43,73,0.05) 60%);z-index:-1;}
+.gallery-item span{font-weight:700;font-size:0.9rem;font-family:var(--font-display);}
+.g1::before{background:linear-gradient(135deg,#1668B0,#0B3D67);}
+.g2::before{background:linear-gradient(135deg,#F5821F,#D9690A);}
+.g3::before{background:linear-gradient(135deg,#2E8BE6,#164C82);}
+.g4::before{background:linear-gradient(135deg,#0B3D67,#12202E);}
+.g5::before{background:linear-gradient(135deg,#D9690A,#8C4406);}
+.gallery-item svg{position:absolute;right:12px;top:12px;width:26px;height:26px;stroke:rgba(255,255,255,0.55);}
+@media (max-width:920px){.gallery-grid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:560px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start;}
+.contact-info-card{background:var(--navy);color:var(--white);border-radius:20px;padding:34px 28px;}
+.contact-info-card h3{color:var(--white);font-size:1.3rem;margin-bottom:6px;}
+.contact-info-card > p{color:#B9CBDD;font-size:0.92rem;margin-bottom:24px;}
+.info-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid rgba(255,255,255,0.12);}
+.info-row:first-of-type{border-top:none;}
+.info-row .icon-badge{background:rgba(245,130,31,0.18);color:var(--orange);width:40px;height:40px;flex-shrink:0;}
+.info-row .icon-badge svg{width:19px;height:19px;}
+.info-row b{display:block;font-size:0.92rem;}
+.info-row span{font-size:0.86rem;color:#B9CBDD;}
+.map-box{margin-top:22px;border-radius:14px;overflow:hidden;border:1px dashed rgba(255,255,255,0.3);height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#B9CBDD;background:rgba(255,255,255,0.04);}
+.map-box svg{width:28px;height:28px;stroke:var(--orange);}
+.social-row{display:flex;gap:10px;margin-top:24px;}
+.social-row a{width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.social-row a:hover{background:var(--orange);}
+.social-row svg{width:17px;height:17px;stroke:currentColor;}
+
+.form-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:34px 30px;box-shadow:var(--shadow);}
+.form-card h3{margin-bottom:6px;font-size:1.25rem;}
+.form-card > p.hint{color:var(--ink-soft);font-size:0.9rem;margin-bottom:24px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:0.84rem;font-weight:600;color:var(--navy);}
+.field input,.field select,.field textarea{
+  border:1.5px solid var(--line);border-radius:9px;padding:12px 14px;font-size:0.94rem;font-family:inherit;color:var(--ink);background:var(--bg);transition:border-color .15s, background .15s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);background:var(--white);}
+.field textarea{resize:vertical;min-height:96px;}
+.form-note{font-size:0.8rem;color:var(--ink-soft);margin-top:12px;}
+.form-success{display:none;align-items:center;gap:10px;background:rgba(46,139,101,0.1);border:1px solid rgba(46,139,101,0.35);color:#1E7A4E;padding:12px 14px;border-radius:9px;font-size:0.88rem;margin-top:14px;}
+.form-success.show{display:flex;}
+@media (max-width:920px){.contact-grid{grid-template-columns:1fr;}}
+@media (max-width:560px){.form-row{grid-template-columns:1fr;}}
+
+/* ---------- Enquiry / Admission ---------- */
+.enquiry{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,var(--blue));color:var(--white);}
+.enquiry .section-head h2,.enquiry .section-head .kicker{color:var(--white);}
+.enquiry .section-head p{color:#CFE0F2;}
+.enquiry-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;}
+.enquiry-points{display:flex;flex-direction:column;gap:18px;}
+.enquiry-point{display:flex;gap:14px;align-items:flex-start;}
+.enquiry-point .icon-badge{background:rgba(245,130,31,0.2);color:var(--orange);flex-shrink:0;}
+.enquiry-point h4{color:var(--white);font-size:1rem;margin-bottom:3px;}
+.enquiry-point p{color:#B9CBDD;font-size:0.87rem;}
+.enquiry .form-card{background:rgba(255,255,255,0.97);}
+@media (max-width:920px){.enquiry-wrap{grid-template-columns:1fr;}}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy-deep);color:#B9CBDD;padding:64px 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.3fr 0.8fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.footer-brand .brand-text .name{color:var(--white);}
+.footer-brand p{font-size:0.88rem;margin-top:14px;color:#9FB6CC;max-width:280px;}
+footer h4{color:var(--white);font-size:0.95rem;margin-bottom:16px;font-family:var(--font-display);}
+footer ul li{margin-bottom:10px;}
+footer ul li a{font-size:0.87rem;color:#B9CBDD;transition:color .15s;}
+footer ul li a:hover{color:var(--orange);}
+.footer-contact li{display:flex;gap:10px;font-size:0.87rem;align-items:flex-start;}
+.footer-contact svg{width:16px;height:16px;stroke:var(--orange);flex-shrink:0;margin-top:2px;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:22px 0;font-size:0.82rem;color:#7E97AF;}
+.footer-bottom .social-row a{width:34px;height:34px;}
+@media (max-width:920px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+
+/* ---------- Sticky buttons ---------- */
+.fab-whatsapp{
+  position:fixed;bottom:26px;right:26px;z-index:200;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 26px -8px rgba(37,211,102,0.6);
+  transition:transform .2s ease;
+}
+.fab-whatsapp:hover{transform:scale(1.08);}
+.fab-whatsapp svg{width:28px;height:28px;fill:currentColor;}
+.mobile-call-bar{display:none;}
+@media (max-width:720px){
+  .mobile-call-bar{
+    display:flex;position:fixed;bottom:0;left:0;right:0;z-index:199;
+    background:var(--white);border-top:1px solid var(--line);
+    padding:10px 14px;gap:10px;box-shadow:0 -8px 24px -12px rgba(0,0,0,0.25);
+  }
+  .mobile-call-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:9px;font-weight:700;font-size:0.9rem;}
+  .mobile-call-bar .call-btn{background:var(--navy);color:var(--white);}
+  .mobile-call-bar .wa-btn{background:#25D366;color:var(--white);}
+  .fab-whatsapp{bottom:80px;}
+  body{padding-bottom:66px;}
+}
+
+/* ---------- Utility reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+.skip-link{position:absolute;left:-999px;top:0;background:var(--orange);color:#fff;padding:10px 16px;z-index:1000;border-radius:0 0 8px 0;}
+.skip-link:focus{left:0;}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="nav-wrap container">
+    <a href="#home" class="brand" aria-label="Phoenix Computer Education home">
+      <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="100" height="100" rx="22" fill="#0B3D67"/>
+        <path d="M28 72 L50 24 L72 72 M36 56 H64" stroke="#F5821F" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="name">Phoenix Computer Education</span>
+        <span class="tag">CHIKODI · KARNATAKA</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#why">Why Us</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#enquiry" class="btn btn-navy btn-sm">Admission Enquiry</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <svg id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow-pill"><span class="dot"></span>Admissions open · New batches every month</span>
+      <h1>Learn Today, Build Your <em>Future</em> Tomorrow</h1>
+      <p class="hero-sub">Professional Computer Training in Chikodi — practical, job-oriented courses taught by experienced trainers, with certification to back your next career move.</p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn btn-primary">Explore Courses</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>13+</b><span>Courses Offered</span></div>
+        <div class="stat"><b>1000+</b><span>Students Trained</span></div>
+        <div class="stat"><b>100%</b><span>Practical Sessions</span></div>
+        <div class="stat"><b>7 Days</b><span>Lab Access</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-art-card">
+        <svg class="hero-illustration" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a student learning to code on a laptop">
+          <rect x="60" y="210" width="360" height="16" rx="8" fill="#0A2C4A"/>
+          <rect x="90" y="70" width="300" height="150" rx="10" fill="#0F2E4D" stroke="#1668B0" stroke-width="2"/>
+          <rect x="104" y="84" width="272" height="122" rx="4" fill="#082238"/>
+          <text x="118" y="108" fill="#F5821F" font-family="monospace" font-size="13">function build() {</text>
+          <text x="132" y="126" fill="#8FD3FF" font-family="monospace" font-size="13">learn();</text>
+          <text x="132" y="144" fill="#8FD3FF" font-family="monospace" font-size="13">practice();</text>
+          <text x="132" y="162" fill="#FFC489" font-family="monospace" font-size="13">getCertified();</text>
+          <text x="118" y="180" fill="#F5821F" font-family="monospace" font-size="13">}</text>
+          <rect x="210" y="222" width="60" height="10" fill="#0A2C4A"/>
+          <rect x="180" y="230" width="120" height="8" rx="4" fill="#0A2C4A"/>
+          <circle cx="392" cy="60" r="30" fill="#F5821F"/>
+          <path d="M382 60 l7 7 15 -15" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <g>
+            <circle cx="62" cy="270" r="26" fill="#1668B0"/>
+            <path d="M50 275 q12 -18 24 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="55" cy="264" r="3" fill="#fff"/>
+            <circle cx="69" cy="264" r="3" fill="#fff"/>
+          </g>
+          <rect x="30" y="300" width="420" height="4" rx="2" fill="#1668B0" opacity="0.4"/>
+          <circle cx="430" cy="200" r="4" fill="#F5821F"/>
+          <circle cx="450" cy="180" r="3" fill="#2E8BE6"/>
+          <circle cx="40" cy="140" r="4" fill="#2E8BE6"/>
+          <circle cx="60" cy="110" r="3" fill="#F5821F"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HIGHLIGHTS ================= -->
+<section class="highlights">
+  <div class="container">
+    <div class="highlight-grid" id="highlightGrid"></div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-art reveal">
+      <svg viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a computer lab classroom">
+        <rect width="420" height="340" rx="20" fill="#0B3D67"/>
+        <rect x="24" y="24" width="372" height="200" rx="10" fill="#0F3A61"/>
+        <rect x="24" y="24" width="372" height="200" rx="10" fill="url(#gridPattern)"/>
+        <defs>
+          <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M30 0H0V30" fill="none" stroke="rgba(255,255,255,0.05)"/>
+          </pattern>
+        </defs>
+        <g>
+          <rect x="50" y="60" width="80" height="52" rx="6" fill="#082238" stroke="#F5821F" stroke-width="2"/>
+          <rect x="58" y="68" width="64" height="34" fill="#12507F"/>
+          <rect x="80" y="112" width="20" height="8" fill="#082238"/>
+          <rect x="65" y="120" width="50" height="6" rx="3" fill="#082238"/>
+        </g>
+        <g transform="translate(150,0)">
+          <rect x="50" y="60" width="80" height="52" rx="6" fill="#082238" stroke="#2E8BE6" stroke-width="2"/>
+          <rect x="58" y="68" width="64" height="34" fill="#12507F"/>
+          <rect x="80" y="112" width="20" height="8" fill="#082238"/>
+          <rect x="65" y="120" width="50" height="6" rx="3" fill="#082238"/>
+        </g>
+        <g transform="translate(300,0)">
+          <rect x="50" y="60" width="80" height="52" rx="6" fill="#082238" stroke="#F5821F" stroke-width="2"/>
+          <rect x="58" y="68" width="64" height="34" fill="#12507F"/>
+          <rect x="80" y="112" width="20" height="8" fill="#082238"/>
+          <rect x="65" y="120" width="50" height="6" rx="3" fill="#082238"/>
+        </g>
+        <rect x="24" y="150" width="372" height="10" fill="#082238"/>
+        <circle cx="120" cy="180" r="16" fill="#F5821F"/>
+        <circle cx="210" cy="185" r="16" fill="#2E8BE6"/>
+        <circle cx="300" cy="180" r="16" fill="#F5821F"/>
+        <rect x="24" y="244" width="372" height="72" rx="10" fill="#082B49"/>
+        <text x="46" y="278" fill="#FFC489" font-family="Sora, sans-serif" font-size="16" font-weight="700">Practical. Hands-on. Career-focused.</text>
+        <text x="46" y="300" fill="#B9CBDD" font-family="Inter, sans-serif" font-size="12">Every student works on a real computer, every session.</text>
+      </svg>
+    </div>
+    <div class="about-copy reveal">
+      <span class="kicker" style="color:var(--orange);font-weight:700;font-size:0.85rem;display:block;margin-bottom:10px;">ABOUT PHOENIX COMPUTER EDUCATION</span>
+      <h2>Practical computer education, built for real careers</h2>
+      <p>Phoenix Computer Education is a computer training institute based in Chikodi, Karnataka, established to make quality, job-oriented computer skills accessible to every student, professional, and job-seeker in the region.</p>
+      <p>We believe learning computers should mean doing, not just watching. Our classrooms run on hands-on practice, one system per student, and trainers who take time to explain concepts in a way beginners can follow — regardless of their starting point.</p>
+      <div class="about-pillars">
+        <div class="pillar">
+          <h4>Our Mission</h4>
+          <p>To deliver practical, affordable computer education that prepares students for real jobs and everyday digital life.</p>
+        </div>
+        <div class="pillar">
+          <h4>Our Vision</h4>
+          <p>To be Chikodi's most trusted institute for computer learning and career-ready skill development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COURSES ================= -->
+<section class="section section-alt" id="courses">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">OUR COURSES</span>
+      <h2>Courses designed around what employers actually need</h2>
+      <p>From absolute beginners to advanced programmers — pick a course, learn by doing, and walk out with a certificate.</p>
+    </div>
+    <div class="course-grid" id="courseGrid"></div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">WHY CHOOSE US</span>
+      <h2>What makes learning at Phoenix different</h2>
+      <p>We keep batches small, sessions practical, and support ongoing — so every student actually gets job-ready.</p>
+    </div>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section section-alt" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">STUDENT TESTIMONIALS</span>
+      <h2>What our students say</h2>
+      <p>Real feedback from students who trained at Phoenix Computer Education, Chikodi.</p>
+    </div>
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">GALLERY</span>
+      <h2>A look inside Phoenix Computer Education</h2>
+      <p>Photos from our classroom, lab, and training sessions will appear here — placeholders shown below.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">CONTACT US</span>
+      <h2>Have a question? Reach out</h2>
+      <p>Visit us, call us, or send your details and we'll get back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-card reveal">
+        <h3>Phoenix Computer Education</h3>
+        <p>Main Road, Chikodi, Belagavi District, Karnataka – 591201</p>
+
+        <div class="info-row">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div><b>Address</b><span>Near Bus Stand, Chikodi, Karnataka 591201</span></div>
+        </div>
+        <div class="info-row">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div><b>Phone</b><span>+91 98XXX XXXXX</span></div>
+        </div>
+        <div class="info-row">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </div>
+          <div><b>Email</b><span>info@phoenixcomputereducation.in</span></div>
+        </div>
+        <div class="info-row">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div><b>Hours</b><span>Mon – Sat, 9:00 AM – 7:30 PM</span></div>
+        </div>
+
+        <a href="https://wa.me/919800000000?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20courses%20at%20Phoenix%20Computer%20Education" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="margin-top:18px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.94 9.94 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2zm5.8 14.24c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11a16.8 16.8 0 0 1-1.66-.62c-2.93-1.27-4.84-4.23-4.99-4.43-.15-.2-1.2-1.6-1.2-3.05 0-1.46.76-2.17 1.04-2.47.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.51.24.58.83 1.99.9 2.14.07.15.12.32.02.51-.1.2-.15.32-.3.5-.15.17-.32.39-.46.52-.15.15-.31.31-.13.61.18.3.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.48 1.53.3.15.48.13.65-.08.18-.2.76-.88.96-1.19.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.34.07.13.07.72-.17 1.4z"/></svg>
+          Chat on WhatsApp
+        </a>
+
+        <div class="map-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Google Map location — embed to be added</span>
+        </div>
+
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10 9 15 12 10 15 10 9" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>Send us a message</h3>
+        <p class="hint">Fill in your details and we'll respond as soon as possible.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="cName">Full Name</label>
+              <input type="text" id="cName" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="cPhone">Phone Number</label>
+              <input type="tel" id="cPhone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:16px;">
+            <label for="cCourse">Course Interested</label>
+            <select id="cCourse" name="course" required>
+              <option value="" disabled selected>Select a course</option>
+            </select>
+          </div>
+          <div class="field" style="margin-bottom:6px;">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" name="message" placeholder="Tell us a bit about what you're looking for"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:16px;">Send Message</button>
+          <div class="form-success" id="contactSuccess">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Thanks! Your message is ready to send on WhatsApp — continue in the new tab.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRY / ADMISSION ================= -->
+<section class="section enquiry" id="enquiry">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">ADMISSION ENQUIRY</span>
+      <h2>Reserve your seat in the next batch</h2>
+      <p>Share a few details below and our team will help you choose the right course and batch timing.</p>
+    </div>
+    <div class="enquiry-wrap">
+      <div class="enquiry-points reveal">
+        <div class="enquiry-point">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><h4>Quick response</h4><p>Our team typically responds within a few hours on the same day.</p></div>
+        </div>
+        <div class="enquiry-point">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div><h4>No obligation</h4><p>Ask questions, compare courses, and decide at your own pace.</p></div>
+        </div>
+        <div class="enquiry-point">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><h4>Flexible batches</h4><p>Morning, afternoon, and evening batches to fit school, college, or work.</p></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>Admission Enquiry Form</h3>
+        <p class="hint">Takes less than a minute.</p>
+        <form id="enquiryForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="eName">Student Name</label>
+              <input type="text" id="eName" name="name" placeholder="Student's full name" required>
+            </div>
+            <div class="field">
+              <label for="eMobile">Mobile Number</label>
+              <input type="tel" id="eMobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="eCourse">Course</label>
+              <select id="eCourse" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="eBatch">Preferred Batch</label>
+              <select id="eBatch" name="batch" required>
+                <option value="" disabled selected>Select batch timing</option>
+                <option>Morning (8 AM – 11 AM)</option>
+                <option>Afternoon (12 PM – 3 PM)</option>
+                <option>Evening (4 PM – 7 PM)</option>
+                <option>Weekend Batch</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:6px;">
+            <label for="eMessage">Message</label>
+            <textarea id="eMessage" name="message" placeholder="Any specific requirement or question"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:16px;">Submit Enquiry</button>
+          <div class="form-success" id="enquirySuccess">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Thanks! Your enquiry is ready to send on WhatsApp — continue in the new tab.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="100" height="100" rx="22" fill="#F5821F"/>
+            <path d="M28 72 L50 24 L72 72 M36 56 H64" stroke="#0B3D67" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-text"><span class="name">Phoenix Computer Education</span></span>
+        </div>
+        <p>Professional, practical computer training in Chikodi, Karnataka — helping students build real, job-ready skills since day one.</p>
+        <div class="social-row" style="margin-top:18px;">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10 9 15 12 10 15 10 9" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Courses</h4>
+        <ul id="footerCourseList"></ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Chikodi, Belagavi District, Karnataka</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+91 98XXX XXXXX</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>info@phoenixcomputereducation.in</li>
+          <li><a href="https://wa.me/919800000000" target="_blank" rel="noopener" style="color:#25D366;font-weight:600;">WhatsApp Us →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Phoenix Computer Education. All rights reserved.</span>
+      <span>Chikodi, Karnataka</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY BUTTONS ================= -->
+<a href="https://wa.me/919800000000?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Phoenix%20Computer%20Education" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.94 9.94 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2zm5.8 14.24c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11a16.8 16.8 0 0 1-1.66-.62c-2.93-1.27-4.84-4.23-4.99-4.43-.15-.2-1.2-1.6-1.2-3.05 0-1.46.76-2.17 1.04-2.47.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.51.24.58.83 1.99.9 2.14.07.15.12.32.02.51-.1.2-.15.32-.3.5-.15.17-.32.39-.46.52-.15.15-.31.31-.13.61.18.3.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.48 1.53.3.15.48.13.65-.08.18-.2.76-.88.96-1.19.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.34.07.13.07.72-.17 1.4z"/></svg>
+</a>
+
+<div class="mobile-call-bar">
+  <a href="tel:+919800000000" class="call-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call Now
+  </a>
+  <a href="https://wa.me/919800000000" target="_blank" rel="noopener" class="wa-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.94 9.94 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+/* ---------------- Icon library ---------------- */
+const ICONS = {
+  target:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+  users:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  briefcase:'<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+  award:'<circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/>',
+  laptop:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/>',
+  layers:'<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>',
+  hardware:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>',
+  code:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+  rupee:'<path d="M6 4h12M6 8h12M9 4a5 5 0 0 1 0 9h-3l7 8"/>',
+  compass:'<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>',
+  certificate:'<circle cx="12" cy="9" r="6"/><path d="M9 14.5 7 22l5-3 5 3-2-7.5"/>',
+  heart:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>',
+  check:'<polyline points="20 6 9 17 4 12"/>',
+  star:'<polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/>',
+  monitor:'<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+  people:'<circle cx="9" cy="8" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><circle cx="18" cy="8" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/>',
+  camera:'<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>',
+  calendar:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
+};
+const icon = (name, extra='') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${extra}>${ICONS[name]||''}</svg>`;
+
+/* ---------------- Data ---------------- */
+const highlights = [
+  {icon:'target', title:'Practical Training', desc:'Hands-on practice on real systems in every single session.'},
+  {icon:'users', title:'Experienced Trainers', desc:'Learn from trainers who know how to teach beginners.'},
+  {icon:'briefcase', title:'Job-Oriented Courses', desc:'Courses mapped to real skills employers ask for.'},
+  {icon:'award', title:'Certificate Courses', desc:'Get a recognised certificate on successful completion.'},
+];
+
+const courses = [
+  {name:'Basic Computer Course', desc:'Computer fundamentals, operating system, file handling and internet basics for absolute beginners.', duration:'1 Month', icon:'monitor'},
+  {name:'MS Office', desc:'Word, Excel, PowerPoint and Outlook for everyday office and administrative work.', duration:'1.5 Months', icon:'layers'},
+  {name:'Tally', desc:'Accounting, GST, billing and inventory management using Tally Prime for business use.', duration:'2 Months', icon:'rupee'},
+  {name:'Advanced Excel', desc:'Formulas, pivot tables, dashboards and data analysis for office and finance roles.', duration:'1 Month', icon:'layers'},
+  {name:'C Programming', desc:'Core programming logic, syntax and problem solving using the C language.', duration:'2 Months', icon:'code'},
+  {name:'C++', desc:'Object-oriented programming concepts with hands-on coding practice.', duration:'2 Months', icon:'code'},
+  {name:'Java', desc:'Core Java concepts, OOP and application-building for aspiring developers.', duration:'3 Months', icon:'code'},
+  {name:'Python', desc:'Beginner-friendly programming, widely used in automation, data and web development.', duration:'2.5 Months', icon:'code'},
+  {name:'Web Designing', desc:'Design and build responsive websites from scratch using modern tools.', duration:'2 Months', icon:'monitor'},
+  {name:'HTML & CSS', desc:'Structure and style web pages — the foundation of every website.', duration:'1 Month', icon:'code'},
+  {name:'JavaScript', desc:'Add interactivity and logic to websites with hands-on JavaScript projects.', duration:'1.5 Months', icon:'code'},
+  {name:'Computer Hardware & Networking', desc:'Assembling, troubleshooting, and networking fundamentals for IT support roles.', duration:'2 Months', icon:'hardware'},
+  {name:'Typing Course', desc:'Build speed and accuracy in English/Kannada typing for exams and office work.', duration:'1 Month', icon:'monitor'},
+];
+
+const whyPoints = [
+  {icon:'target', title:'Practical Learning', desc:'Every concept is followed by hands-on practice.'},
+  {icon:'users', title:'Experienced Faculty', desc:'Trainers experienced in teaching absolute beginners.'},
+  {icon:'heart', title:'Beginner Friendly', desc:'No prior computer knowledge required to start.'},
+  {icon:'code', title:'Latest Computer Skills', desc:'Curriculum updated to match current industry tools.'},
+  {icon:'rupee', title:'Affordable Fees', desc:'Quality training at fees that fit local budgets.'},
+  {icon:'compass', title:'Career Guidance', desc:'Guidance on the right course for your career goals.'},
+  {icon:'certificate', title:'Certificate', desc:'Recognised certification on course completion.'},
+  {icon:'heart', title:'Supportive Environment', desc:'A friendly, encouraging space to learn at your pace.'},
+];
+
+const testimonials = [
+  {name:'Sanika Patil', course:'Tally & Advanced Excel', rating:5, quote:'The trainers explained everything practically. I got confident with Tally within weeks and now handle accounts at my job.'},
+  {name:'Rahul Desai', course:'Python', rating:5, quote:'Best place in Chikodi to learn programming. Small batches meant the trainer could actually help each of us individually.'},
+  {name:'Ayesha Mulla', course:'Web Designing', rating:4, quote:'I built my first website in the second month itself. The hands-on approach here is genuinely different from other classes.'},
+  {name:'Prasad Kulkarni', course:'Hardware & Networking', rating:5, quote:'Learned real troubleshooting on actual machines, not just theory. Got placed in a local service center right after the course.'},
+];
+
+const gallery = [
+  {label:'Classroom', cls:'g1', icon:'monitor'},
+  {label:'Students', cls:'g2', icon:'people'},
+  {label:'Computer Lab', cls:'g3', icon:'hardware'},
+  {label:'Training Sessions', cls:'g4', icon:'users'},
+  {label:'Events', cls:'g5', icon:'calendar'},
+];
+
+/* ---------------- Renderers ---------------- */
+function renderHighlights(){
+  document.getElementById('highlightGrid').innerHTML = highlights.map(h=>`
+    <div class="highlight-card">
+      <div class="icon-badge">${icon(h.icon)}</div>
+      <h3>${h.title}</h3>
+      <p>${h.desc}</p>
+    </div>`).join('');
+}
+
+function renderCourses(){
+  document.getElementById('courseGrid').innerHTML = courses.map((c,i)=>`
+    <div class="course-card">
+      <div class="course-top">
+        <div class="course-icon">${icon(c.icon)}</div>
+        <span class="course-duration">${c.duration}</span>
+      </div>
+      <h3>${c.name}</h3>
+      <p>${c.desc}</p>
+      <button class="btn btn-navy btn-sm enquire-btn" data-course="${c.name}">Enquire Now</button>
+    </div>`).join('');
+
+  // populate select dropdowns
+  const opts = courses.map(c=>`<option value="${c.name}">${c.name}</option>`).join('');
+  document.getElementById('cCourse').innerHTML += opts;
+  document.getElementById('eCourse').innerHTML += opts;
+
+  // footer popular courses (first 6)
+  document.getElementById('footerCourseList').innerHTML = courses.slice(0,6).map(c=>`<li><a href="#courses">${c.name}</a></li>`).join('');
+}
+
+function renderWhy(){
+  document.getElementById('whyGrid').innerHTML = whyPoints.map(w=>`
+    <div class="why-card">
+      <div class="icon-badge">${icon(w.icon)}</div>
+      <h3>${w.title}</h3>
+      <p>${w.desc}</p>
+    </div>`).join('');
+}
+
+function renderTestimonials(){
+  const colors = ['#1668B0','#F5821F','#0B3D67','#2E8BE6'];
+  document.getElementById('testiGrid').innerHTML = testimonials.map((t,i)=>`
+    <div class="testi-card">
+      <div class="stars">${Array.from({length:5},(_,i)=>`<svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3" fill="${i<t.rating?'currentColor':'none'}" stroke="currentColor" stroke-width="1"/></svg>`).join('')}</div>
+      <p class="quote">"${t.quote}"</p>
+      <div class="testi-person">
+        <div class="avatar" style="background:${colors[i%colors.length]}">${t.name.split(' ').map(n=>n[0]).join('')}</div>
+        <div class="who"><b>${t.name}</b><span>${t.course}</span></div>
+      </div>
+    </div>`).join('');
+}
+
+function renderGallery(){
+  document.getElementById('galleryGrid').innerHTML = gallery.map(g=>`
+    <div class="gallery-item ${g.cls}">
+      ${icon(g.icon)}
+      <span>${g.label}</span>
+    </div>`).join('');
+}
+
+renderHighlights();
+renderCourses();
+renderWhy();
+renderTestimonials();
+renderGallery();
+
+/* ---------------- Nav toggle ---------------- */
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', ()=>{
+  const open = navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', open);
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+  navLinks.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+}));
+
+/* ---------------- Enquire Now buttons -> scroll & prefill ---------------- */
+document.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.enquire-btn');
+  if(!btn) return;
+  const course = btn.dataset.course;
+  document.getElementById('eCourse').value = course;
+  document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});
+});
+
+/* ---------------- Forms -> WhatsApp handoff ---------------- */
+const WA_NUMBER = '919800000000';
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = this.name.value.trim();
+  const phone = this.phone.value.trim();
+  const course = this.course.value;
+  const message = this.message.value.trim();
+  if(!name || !phone || !course){ this.reportValidity(); return; }
+  const text = `Hello, I'm ${name} (${phone}).%0AI'm interested in: ${course}.%0AMessage: ${message || '—'}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
+  document.getElementById('contactSuccess').classList.add('show');
+  this.reset();
+});
+
+document.getElementById('enquiryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = this.name.value.trim();
+  const mobile = this.mobile.value.trim();
+  const course = this.course.value;
+  const batch = this.batch.value;
+  const message = this.message.value.trim();
+  if(!name || !mobile || !course || !batch){ this.reportValidity(); return; }
+  const text = `Admission Enquiry%0AName: ${name}%0AMobile: ${mobile}%0ACourse: ${course}%0APreferred Batch: ${batch}%0AMessage: ${message || '—'}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
+  document.getElementById('enquirySuccess').classList.add('show');
+  this.reset();
+});
+
+/* ---------------- Scroll reveal ---------------- */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+  });
+}, {threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
